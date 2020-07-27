@@ -2,7 +2,7 @@
   <section>
     <v-row no-gutters>
       <v-col cols="12" md="6" class="pa-0 hidden-sm-and-down">
-        <v-img :src="require('@/assets/services.png')" height="100%" />
+        <v-img :src="require('@/assets/services.jpg')" height="100%" />
       </v-col>
       <v-col cols="12" md="6" class="pa-0 brown lighten-5">
         <v-card color="transparent" flat min-height="100vh">

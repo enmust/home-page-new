@@ -85,10 +85,23 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
 
+  // Todo: Can remove watcher after portfolio is done
+  watch: {
+    "$route.name"(newVal) {
+      if (newVal && newVal === "Portfolio") {
+        this.isFlat = false;
+        this.showTitle = true;
+      }
+    }
+  },
+
   methods: {
     handleScroll() {
-      this.isFlat = window.scrollY < 40;
-      this.showTitle = window.scrollY >= 100;
+      // Todo: Remove if check after portfolio is done
+      if (this.$route.name === "Home") {
+        this.isFlat = window.scrollY < 40;
+        this.showTitle = window.scrollY >= 100;
+      }
     }
   }
 };
